@@ -1,4 +1,4 @@
-# Akhmad Rifai — Portfolio
+# Vylonium — Portfolio
 
 A complete, production-ready personal portfolio website.
 
@@ -23,4 +23,4 @@ A complete, production-ready personal portfolio website.
 Any static host works. For GitHub Pages, the site publishes automatically from the `main` branch root.
 
 ## License
-© 2026 Akhmad Rifai. All rights reserved.
+© 2026 Vylonium. All rights reserved.
