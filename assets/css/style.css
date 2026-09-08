@@ -451,3 +451,13 @@ body { overflow-wrap: break-word; }
   .info-row { grid-template-columns: 1fr; gap: 6px; }
   .filters button { padding: 8px 14px; }
 }
+
+/* Tighten mobile hero spacing so the photo isn't buried far below the fold
+   (hero used forced min-height + generous gaps causing photo to require a big scroll) */
+@media (max-width: 760px) {
+  .hero { min-height: auto; padding: 118px 0 50px; }
+  .hero-grid { gap: 34px; }
+  .hero-lead { margin: 16px 0 26px; }
+  .hero h1 { margin: 14px 0 12px; }
+  .hero-visual { max-width: 340px; margin: 0 auto; }
+}
