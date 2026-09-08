@@ -397,7 +397,7 @@ body.ready .page { opacity: 1; transform: none; }
 [data-reveal].revealed { opacity: 1; transform: none; }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 980px) {
+@media (max-width: 900px) {
   .hero-grid, .intro-grid, .contact-grid { grid-template-columns: 1fr; gap: 50px; }
   .hero { padding-top: 120px; }
   .hero-visual { max-width: 420px; }
