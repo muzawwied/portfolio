@@ -414,3 +414,37 @@ body.ready .page { opacity: 1; transform: none; }
   *, *::before, *::after { animation-duration: .001s !important; transition-duration: .001s !important; }
   html { scroll-behavior: auto; }
 }
+
+/* ==========================================================================
+   MOBILE OVERFLOW SAFETY (fix: content poking beyond screen edge on phones)
+   ========================================================================== */
+html {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body { overflow-wrap: break-word; }
+
+/* svh = viewport that respects mobile browser bars (no cut-off heroes) */
+.hero { min-height: 100svh; }
+
+/* grid/flex children must be allowed to shrink (prevents wide-child overflow) */
+.hero-grid > *, .intro-grid > *, .contact-grid > *, .work-row > *,
+.service-row > *, .post-row > *, .info-row > *, .stats > *,
+.section-head > * { min-width: 0; }
+.work-info h3, .service-row h3, .post-row h3, .section-head h2 { overflow-wrap: break-word; }
+
+.marquee { max-width: 100%; }
+
+@media (max-width: 760px) {
+  .hero { min-height: 100svh; }
+  .hero-badge { left: 4%; font-size: .68rem; padding: 10px 14px; }
+  .hero-cta .btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 420px) {
+  .stats { grid-template-columns: 1fr; gap: 26px 0; }
+  .stat { border-left: 0; padding-left: 0; }
+  .info-row { grid-template-columns: 1fr; gap: 6px; }
+  .filters button { padding: 8px 14px; }
+}
